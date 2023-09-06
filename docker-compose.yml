@@ -1,0 +1,53 @@
+version: '3.8'
+services:
+  db:
+    container_name: db-container
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_USER=vyashya
+      - MYSQL_PASSWORD=Rashmika@12
+      - MYSQL_DATABASE=serverdb
+      - MYSQL_ROOT_PASSWORD=Rashmika@12
+      - PORT=9906
+    ports:
+      - '9906:3306'
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  api:
+    container_name: server-api
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_PORT: 9906
+      DB_USER: vyashya
+      DB_PASSWORD: Rashmika@12
+      DB_NAME: serverdb
+    links:
+      - db
+  frontend:
+    container_name: frontend-container
+    stdin_open: true
+    build: 
+      dockerfile: Dockerfile
+      context: ./frontend
+    depends_on:
+      - api
+      - db
+    environment:
+      - REACT_APP_URL=http://localhost:8000/
+    ports:
+      - 3000:3000
+volumes:
+  db:
+    driver: local
