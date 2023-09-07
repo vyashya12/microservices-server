@@ -45,7 +45,7 @@ services:
       - api
       - db
     environment:
-      - REACT_APP_URL=http://localhost:8000/
+      - REACT_APP_URL=http://45.127.5.240:8000/
     ports:
       - 3000:3000
 volumes:
