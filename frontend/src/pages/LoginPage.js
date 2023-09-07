@@ -67,6 +67,7 @@ function LoginPage() {
     } else {
       // fetch(`${process.env.REACT_APP_URL}api/servers/login`, {
       console.log(Config.api_url);
+      console.log(process.env.REACT_APP_URL);
       fetch(`${process.env.REACT_APP_URL}api/servers/login`, {
         method: "POST",
         headers: {
