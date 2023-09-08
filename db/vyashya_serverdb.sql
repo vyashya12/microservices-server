@@ -40,9 +40,9 @@ CREATE TABLE `backupstatus` (
 -- Dumping data for table `backupstatus`
 --
 
-INSERT INTO `backupstatus` (`id`, `IP`, `Status`, `LastUpdate`) VALUES
-(1, '127.0.0.1:90', 'Healthy', '2023-08-09 20:01:53'),
-(2, '127.0.0.12', 'Unhealthy', '2023-08-15 11:45:00');
+-- INSERT INTO `backupstatus` (`id`, `IP`, `Status`, `LastUpdate`) VALUES
+-- (1, '127.0.0.1:90', 'Healthy', '2023-08-09 20:01:53'),
+-- (2, '127.0.0.12', 'Unhealthy', '2023-08-15 11:45:00');
 
 -- --------------------------------------------------------
 
@@ -71,11 +71,6 @@ CREATE TABLE `servers` (
 --
 -- Dumping data for table `servers`
 --
-
-INSERT INTO `servers` (`id`, `ServerName`, `IP`, `Drive`, `Size`, `SizeFree`, `SizeUsed`, `PercentFree`, `TotalMemory`, `FreeMemory`, `UsedMemory`, `OnlineVPS`, `OfflineVPS`, `LastUpdate`, `ServerUptime`) VALUES
-(21, '549-VM-820', '42.1.62.111', 'C:', 79.4, 43.41, 35.98, 54, 3.02, 0.27, 2.75, NULL, NULL, '2023-09-01 00:00:20', 21),
-(22, 'WIN-CMH7EI98E7F', '103.7.10.43', 'C:', 30.45, 9.62, 20.83, 31, 4, 1.04, 2.96, NULL, NULL, '2023-09-01 00:00:23', 20),
-(23, 'MYJUMPER', '169.254.59.134', 'D:', 930.98, 871.42, 59.56, 93, 63.89, 40.1, 23.8, 1, 0, '2023-08-14 14:43:26', 16);
 
 -- --------------------------------------------------------
 
