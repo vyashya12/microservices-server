@@ -39,16 +39,16 @@ function BackupStatus() {
         <Container maxWidth="xl" sx={{ mt: 10 }}>
           <Typography variant="h4">Backup Status</Typography>
 
-          // <Card elevation={3} style={{ width: "30%", marginTop: 20 }}>
-          //   <CardContent>
-          //     <ListItem disablePadding>
-          //       <ListItemButton>
-          //         <ListItemText primary="Device1" />
-          //         <Switch defaultChecked />
-          //       </ListItemButton>
-          //     </ListItem>
-          //   </CardContent>
-          // </Card>
+           {/*<Card elevation={3} style={{ width: "30%", marginTop: 20 }}>
+            <CardContent>
+              <ListItem disablePadding>
+                <ListItemButton>
+                  <ListItemText primary="Device1" />
+                  <Switch defaultChecked />
+                </ListItemButton>
+              </ListItem>
+            </CardContent>
+          </Card>*/}
         </Container>
       </StyledRoot>
     </>
