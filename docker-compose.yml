@@ -36,6 +36,7 @@ services:
       SCRIPTPASSWORD: g1paGwcmEYsVlQEKNyfgFwqvj
       USERNAMESERVER: server_user
       RATELIMITER: 10
+      SCRIPTPASSWORD: g1paGwcmEYsVlQEKNyfgFwqvj
     logging:
       driver: journald
     links:
