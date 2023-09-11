@@ -33,12 +33,9 @@ services:
       DB_USER: vyashya
       DB_PASSWORD: Rashmika@12
       DB_NAME: serverdb
-      SCRIPTPASSWORD: g1paGwcmEYsVlQEKNyfgFwqvj
       USERNAMESERVER: server_user
       RATELIMITER: 10
-      SCRIPTPASSWORD: g1paGwcmEYsVlQEKNyfgFwqvj
-    logging:
-      driver: journald
+      SCRIPTPASSWORD: 'g1paGwcmEYsVlQEKNyfgFwqvj'
     links:
       - db
   frontend:
